@@ -1,0 +1,33 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+  <div class="container">
+
+    <div class="row justify-content-md-center">
+      <div class="col">
+        email
+      </div>
+      <div class="col">
+        <input id="ipEmailAddress" formControlName="emailAddress" type="text" required />
+      </div>
+    </div>
+
+    <div class="row justify-content-md-center">
+      <div class="col">
+        password
+      </div>
+      <div class="col">
+        <input id="ipPassword" formControlName="password" type="password" />
+      </div>
+    </div>
+
+    <div class="row justify-content-md-center">
+      <div class="col">
+        <Button *ngIf="router.url==='/sign-in'" (click)="button='signIn'" Class="btn btn-primary">sign in</Button>
+      </div>  
+    </div>
+    
+  </div>
+
+
+
+</form>

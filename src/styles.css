@@ -1,0 +1,86 @@
+/* You can add global styles to this file, and also import other style files */
+
+/*title, subtile, menu, header, footer background-color*/
+.title{background-color:#279FBB; color:white;}
+.subtitle{background-color:#070707; color:white; padding-top: 5px; padding-bottom:5px; }
+.menu{background-color:#101010; color:white;padding-top: 5px;padding-bottom:5px;}
+.site-content{max-width:600px; margin-top:10px;}
+.footer{background-color:#070707;color:white;padding-top: 5px;padding-bottom:15px;}
+.footer .col-xs-12{margin-top:10px;}
+
+/*Centered menu*/
+.nav {
+    display: inline-block;
+    float: none;
+}
+
+/* main menu items */
+.menu .nav > li a {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/*Menu hyperlink text color*/
+.menu .nav a{color:white;}
+
+/*Active menu item and hover color*/
+.menu .nav > li a.active,
+.menu .nav > li a:hover,
+.menu .nav > li.open > a,
+.menu .nav li li a.active,
+.menu .nav li li a:hover
+{background-color: #279FBB; color:white}
+
+/*Default cursor on active menu item*/
+.menu .nav a.active{cursor:default;}
+
+/*Allow pointer if active menu item has sub-menu*/
+.menu .nav a.dropdown-toggle:hover{cursor:pointer}
+
+/*Sub-Menu background and border*/
+.menu .nav ul {background-color: #333; border:solid  1px #666;}
+
+
+.dropdown-menu li a{
+  color: #fff;
+}
+
+/* Site Content in Router-Outlet */
+.site-content{max-width: 600px;}
+
+.open > .dropdown-menu {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);  
+    
+  }
+
+
+  .dropdown-menu {
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    -webkit-animation-fill-mode: forwards;  
+    animation-fill-mode: forwards; 
+    -webkit-transform: scale(1, 0);
+    transform: scale(1, 0);
+    display: block;
+    
+    transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+  }
+  .dropup .dropdown-menu {
+    -webkit-transform-origin: bottom;
+    transform-origin: bottom;  
+  }
+  
+  .dropup > .dropdown-menu:after {
+    border-bottom: 0;
+    border-top: 6px solid rgba(39, 45, 51, 0.9);
+    top: auto;
+    display: inline-block;
+    bottom: -6px;
+    content: '';
+    position: absolute;
+    left: 50%;
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+  }

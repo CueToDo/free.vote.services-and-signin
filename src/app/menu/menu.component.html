@@ -1,0 +1,31 @@
+<div class="dropdown menu">
+
+  <ul class="nav nav-pills">
+    <li>
+      <a routerLink="/" [ngClass]="{ active: isActive('/') }">Home</a>
+    </li>
+    <li>
+      <a href="#" [ngClass]="{ active: isActive('Menu') }" data-toggle="dropdown" class="dropdown-toggle">Menu</a>
+      <ul class="dropdown-menu">
+        <li><a routerLink="/menu-component" [ngClass]="{active: isActive('/menu-component')}">menu component</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#" [ngClass]="{ active: isActive('Routing') }" data-toggle="dropdown" class="dropdown-toggle">Routing</a>
+      <ul class="dropdown-menu">
+        <li><a routerLink="/routing" [ngClass]="{active: isActive('/routing')}">routing</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#" [ngClass]="{ active: isActive('QuickPosts') }" data-toggle="dropdown" class="dropdown-toggle">Quick Posts</a>
+      <ul class="dropdown-menu">
+        <li><a routerLink="/trending" [ngClass]="{active: isActive('/trending')}">trending</a></li>
+        <li><a routerLink="/selected" [ngClass]="{active: isActive('/selected')}">selected</a></li>
+        <li><a routerLink="/my-posts" [ngClass]="{active: isActive('/my-posts')}">my posts</a></li>
+        <li><a routerLink="/favourite-posts" [ngClass]="{active: isActive('/favourite-posts')}">favourite posts</a></li>
+      </ul>
+    </li>
+    <li><a routerLink="/sign-in" [ngClass]="{ active: isActive('/sign-in') }">Sign In</a></li>
+  </ul>
+
+</div>

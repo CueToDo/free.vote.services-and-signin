@@ -1,0 +1,55 @@
+
+<h1>app.module.ts</h1>
+<h2>Import</h2>
+<p>
+  import {{ '{' }} Routes, RouterModule } from "@angular/router"
+</p>
+<h2>Map route to component</h2>
+<p ng-non-bindable>
+  const appRoutes: Routes = [ 
+  <br>{{ '{' }} path: '', component: HomeComponent }, 
+  <br>{{ '{' }} path: 'menu-component', component: MenuTextComponent
+  <br>} ];
+</p>
+<h2>Import RouterModule</h2>
+<p>
+    @NgModule({{ '{' }}
+      <br>declarations: [
+      <br>AppComponent,
+      <br>MenuComponent,
+      <br>TrendingComponent,
+      <br>HomeComponent,
+      <br>SelectedComponent,
+      <br>MyPostsComponent,
+      <br>FavouritePostsComponent,
+      <br>SignInComponent,
+      <br>MenuTextComponent,
+      <br>],
+      <br>imports: [
+      <br>BrowserModule,
+      <br>FormsModule,
+      <br>HttpModule,
+      <br>RouterModule.forRoot(appRoutes)
+      <br>],
+      <br>providers: [],
+      <br>bootstrap: [AppComponent]
+      <br>})
+      <br>export class AppModule {{ '{' }}
+        <br>
+        <br>}
+</p>
+<hr>
+<h1>app.component.html</h1>
+<h2>router outlet</h2>
+<p>
+    &lt;div class="container"&gt; 
+    <br>&lt;div class="row"&gt;
+    <br>&lt;div class="col-xs-12"&gt;
+    <br>&lt;router-outlet&gt;&lt;/router-outlet&gt;
+    <br>&lt;/div&gt;
+    <br>&lt;/div&gt;
+    <br>&lt;/div>
+</p>
+<hr>
+<h1>app.component.ts</h1>
+<h2></h2>
