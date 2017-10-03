@@ -13,8 +13,8 @@ import 'rxjs/add/operator/map'; //https://stackoverflow.com/questions/34515173/a
 })
 export class SignInComponent implements OnInit {
 
-  // private signInUrl = "http://freevote-002-site1.btempurl.com/authentication/signin";
-  private signInUrl = 'http://localhost:56529/authentication/signin';
+  private signInUrl = "http://freevote-002-site1.btempurl.com/authentication/signin";
+  //private signInUrl = 'http://localhost:56529/authentication/signin';
 
   router: Router; //Why is this needed here?
 
@@ -45,7 +45,7 @@ export class SignInComponent implements OnInit {
   onSubmit() {
     if (this.button == "signIn") {
 
-      //debugger;
+      debugger;
 
       let data = { "website": "free.vote", "email": this.emailAddress.value, "password": this.password.value };
 
@@ -54,6 +54,7 @@ export class SignInComponent implements OnInit {
         .map(response => response.json())
         .subscribe(response => {
 
+          debugger;
           this.waiting = false;
 
           let result: SignInData = <SignInData>response;

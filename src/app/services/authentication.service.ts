@@ -8,7 +8,7 @@ export class AuthenticationService {
 
     constructor(private httpClientService: HttpClientService) { }
 
-    private signInUrl = "http://freevote-002-site1.btempurl.com/authentication/signin";
+    private signInUrl = "http://freevote-002-site1.btempurl.com/authentication/signin/";
 
     SignIn(website: string, email: string, password: string): Observable<any> {
 
@@ -29,7 +29,8 @@ export class AuthenticationService {
         //     error => { console.log("ANY OLD Error " + error) }
         //     );
 
-
+        debugger;
+        
         let data = { "website": website, "email": email, "password": password };
 
         return this.httpClientService
