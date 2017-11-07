@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+.form-control:focus {
+  border-color: #FF0000;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+}
 
 /*title, subtile, menu, header, footer background-color*/
 .title{background-color:#279FBB; color:white;}
@@ -84,3 +88,7 @@
     border-right: 6px solid transparent;
     border-left: 6px solid transparent;
   }
+
+
+  .signin .row {margin-top:8px;}
+  .signin:last-child {margin-bottom:8px;}
