@@ -1,4 +1,4 @@
-import { Response } from '@angular/http';
+//import { Response } from '@angular/http';
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpClientService } from './http-client.service';
@@ -35,7 +35,7 @@ export class AuthenticationService {
 
         return this.httpClientService
             .post(this.signInUrl, data)
-            .map(response => response.json());
+            //.map(response => response.json()); //assumed - not needed
 
             // .subscribe(
             // response => { console.log("SIGN-IN-NEW Success " + response.Value) },

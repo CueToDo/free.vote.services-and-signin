@@ -43,18 +43,20 @@ export class SignInComponent implements OnInit {
   }
 
   onSubmit() {
+    console.log('submit');
     if (this.button == "signIn") {
 
-      //debugger;
+      debugger;
 
       let data = { "website": "free.vote", "email": this.emailAddress.value, "password": this.password.value };
 
       this.httpClientService
         .post(this.signInUrl, data)
-        .map(response => response.json())
+        //.map(response => response.json()) not needed json assumed
         .subscribe(response => {
 
-          //debugger;
+          debugger;
+          console.log('no debugger');
           this.waiting = false;
 
           let result: SignInData = <SignInData>response;

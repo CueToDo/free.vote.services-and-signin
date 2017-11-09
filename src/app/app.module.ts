@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 // https://stackoverflow.com/questions/39152071/cant-bind-to-formgroup-since-it-isnt-a-known-property-of-form
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { HttpModule } from '@angular/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Routes, RouterModule } from "@angular/router"
 import { Cookie } from "ng2-cookies"
 
@@ -22,6 +22,7 @@ import { RoutingComponent } from './routing/routing.component';
 
 import { HttpClientService } from './services/http-client.service'
 import { AuthenticationService, SignInData } from './services/authentication.service'
+//import { HttpHandler } from '@angular/common/http/src/backend';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -51,10 +52,10 @@ const appRoutes: Routes = [
     BrowserModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [HttpClientService],
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule {
