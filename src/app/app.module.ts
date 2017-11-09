@@ -7,7 +7,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { HttpModule } from '@angular/http';
 import { Routes, RouterModule } from "@angular/router"
-import { AlertModule } from 'ngx-bootstrap';
 import { Cookie } from "ng2-cookies"
 
 import { AppComponent } from './app.component';
@@ -53,8 +52,7 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes),
-    AlertModule.forRoot()
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [HttpClientService],
   bootstrap: [AppComponent]

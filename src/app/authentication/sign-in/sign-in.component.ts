@@ -45,7 +45,7 @@ export class SignInComponent implements OnInit {
   onSubmit() {
     if (this.button == "signIn") {
 
-      debugger;
+      //debugger;
 
       let data = { "website": "free.vote", "email": this.emailAddress.value, "password": this.password.value };
 
@@ -54,7 +54,7 @@ export class SignInComponent implements OnInit {
         .map(response => response.json())
         .subscribe(response => {
 
-          debugger;
+          //debugger;
           this.waiting = false;
 
           let result: SignInData = <SignInData>response;
